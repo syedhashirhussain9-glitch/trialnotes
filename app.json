@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "TrailNotes",
+    "slug": "trailnotes",
+    "scheme": "trailnotes",
+    "version": "1.0.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#1F6F4A",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.trailnotes.app",
+      "infoPlist": { "ITSAppUsesNonExemptEncryption": false }
+    },
+    "android": {
+      "package": "com.trailnotes.app",
+      "versionCode": 1,
+      "allowBackup": false,
+      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION", "CAMERA"],
+      "blockedPermissions": [
+        "ACCESS_BACKGROUND_LOCATION",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      "expo-sqlite",
+      "expo-secure-store",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "TrailNotes uses your location only while you record a walk, to measure distance and draw your route."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "TrailNotes uses the camera only when you choose to attach a photo to a walk.",
+          "photosPermission": false,
+          "microphonePermission": false
+        }
+      ]
+    ]
+  }
+}
